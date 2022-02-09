@@ -5,11 +5,35 @@ class GirlfriendProperty:
     label: str
     value: str  # Temporary
 
-    def __init__(self, label: str, value: str) -> None:
-        pass
+    def __init__(self, name: str, value: str) -> None:
+        self.name = name
+        self.value = value
 
     def apply(girlfriend: 'Girlfriend'):
         ...
+
+    def get_girlfriend(self):
+        print("  ___________\n"
+              "/////////////{ >o﹤ }\n"
+              "|||||||||||                 |\n"
+              "|||||||||O          O  |\n"
+              "|||||||        /           /|\n"
+              "||||||\       __       /|||\n"
+              "||||||||\_______/||||\n"
+              "|||||||||||||____|||||||||\n"
+              "|||||||||| \ \n"
+              "||||||| |  (       (    |     |\n"
+              "||||||| |               |     |\n"
+              "||||||  |               \ \ \n"
+              "/    //                 \\ \ \n"
+              "//                    \\ \ \n"
+              "//                        \\ \ \n"
+              ")/______________\( ,,,)\n"
+              "{ >o﹤ }{ >o﹤ }{ >o﹤ }\n"
+              "|     |      |     |\n"
+              "|     |      |     |\n"
+              "(___ |      | ___)\n")
+        print("Her name is", self.name)
 
 
 class HairColor(GirlfriendProperty):
@@ -18,8 +42,8 @@ class HairColor(GirlfriendProperty):
 
 
 class BreastSize(GirlfriendProperty):
-    def __init__(self, value: str) -> None:
-        super().__init__('breast_size', value)
+    def __init__(self, breast_size: str) -> None:
+        super().__init__('breast_size', breast_size)
 
 
 big_tiddies = BreastSize('91E')
